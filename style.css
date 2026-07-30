@@ -1,0 +1,490 @@
+/* =====================================================
+   Porsche Sales Analytics
+   style.css
+====================================================== */
+
+:root{
+
+    --black:#0b0b0b;
+    --black-2:#141414;
+    --gray:#1f1f1f;
+    --gray-light:#d6d6d6;
+    --white:#ffffff;
+    --red:#d5001c;
+    --gold:#bfa46f;
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:var(--black);
+
+    color:var(--white);
+
+    font-family:'Inter',sans-serif;
+
+    overflow-x:hidden;
+
+}
+
+/* =======================================
+ NAVBAR
+======================================= */
+
+.navbar-custom{
+
+    background:rgba(0,0,0,.15);
+
+    backdrop-filter:blur(14px);
+
+    transition:.4s;
+
+    padding:18px 0;
+
+}
+
+.navbar-brand{
+
+    font-size:1.4rem;
+
+    letter-spacing:1px;
+
+    font-weight:700;
+
+}
+
+.nav-link{
+
+    color:white !important;
+
+    margin-left:20px;
+
+    transition:.3s;
+
+}
+
+.nav-link:hover{
+
+    color:var(--red)!important;
+
+}
+
+/* =======================================
+ HERO
+======================================= */
+
+.hero{
+
+    position:relative;
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    background-image:url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1800&q=80");
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+.overlay{
+
+    position:absolute;
+
+    width:100%;
+
+    height:100%;
+
+    background:linear-gradient(
+
+        rgba(0,0,0,.55),
+
+        rgba(0,0,0,.75)
+
+    );
+
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:10;
+
+}
+
+.hero h1{
+
+    font-size:72px;
+
+    font-weight:700;
+
+    margin-bottom:25px;
+
+    animation:fadeDown 1.2s;
+
+}
+
+.hero p{
+
+    font-size:22px;
+
+    color:#dddddd;
+
+    max-width:750px;
+
+    margin:auto;
+
+    line-height:1.8;
+
+    animation:fadeUp 1.3s;
+
+}
+
+.hero .btn{
+
+    margin-top:35px;
+
+    padding:15px 45px;
+
+    border-radius:40px;
+
+    font-size:18px;
+
+}
+
+/* =======================================
+ SEÇÕES
+======================================= */
+
+.section-dark{
+
+    padding:100px 0;
+
+    background:var(--black-2);
+
+}
+
+.section-black{
+
+    padding:100px 0;
+
+    background:var(--black);
+
+}
+
+.section-dark h2,
+.section-black h2{
+
+    font-size:42px;
+
+    margin-bottom:30px;
+
+}
+
+.section-dark p{
+
+    color:#cfcfcf;
+
+    line-height:1.8;
+
+}
+
+/* =======================================
+ GLASS CARD
+======================================= */
+
+.glass-card{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:20px;
+
+    padding:35px;
+
+    backdrop-filter:blur(16px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.35);
+
+}
+
+.glass-card h3{
+
+    margin-bottom:25px;
+
+}
+
+.glass-card ul{
+
+    list-style:none;
+
+}
+
+.glass-card li{
+
+    margin-bottom:18px;
+
+}
+
+/* =======================================
+ FEATURE CARDS
+======================================= */
+
+.feature-card{
+
+    background:#171717;
+
+    padding:40px;
+
+    text-align:center;
+
+    border-radius:20px;
+
+    transition:.35s;
+
+    height:100%;
+
+    border:1px solid #242424;
+
+}
+
+.feature-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:var(--red);
+
+    box-shadow:0 15px 35px rgba(213,0,28,.15);
+
+}
+
+.feature-card i{
+
+    font-size:48px;
+
+    color:var(--red);
+
+    margin-bottom:20px;
+
+}
+
+.feature-card h4{
+
+    margin-bottom:15px;
+
+}
+
+.feature-card p{
+
+    color:#c8c8c8;
+
+}
+
+/* =======================================
+ CTA
+======================================= */
+
+.cta{
+
+    padding:120px 20px;
+
+    background:linear-gradient(
+
+        90deg,
+
+        #121212,
+
+        #202020
+
+    );
+
+}
+
+.cta h2{
+
+    font-size:46px;
+
+    margin-bottom:20px;
+
+}
+
+.cta p{
+
+    color:#d2d2d2;
+
+    margin-bottom:35px;
+
+}
+
+/* =======================================
+ BOTÕES
+======================================= */
+
+.btn-danger{
+
+    background:var(--red);
+
+    border:none;
+
+}
+
+.btn-danger:hover{
+
+    background:#a30014;
+
+}
+
+.btn-outline-light{
+
+    border-radius:35px;
+
+    padding:15px 40px;
+
+}
+
+/* =======================================
+ FOOTER
+======================================= */
+
+footer{
+
+    background:black;
+
+    padding:30px;
+
+    text-align:center;
+
+    color:#999;
+
+}
+
+/* =======================================
+ ANIMAÇÕES
+======================================= */
+
+@keyframes fadeDown{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* =======================================
+ RESPONSIVO
+======================================= */
+
+@media(max-width:992px){
+
+.hero h1{
+
+    font-size:52px;
+
+}
+
+.hero p{
+
+    font-size:18px;
+
+}
+
+.section-dark h2,
+.section-black h2{
+
+    font-size:34px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.hero{
+
+    padding:30px;
+
+}
+
+.hero h1{
+
+    font-size:42px;
+
+}
+
+.hero p{
+
+    font-size:17px;
+
+}
+
+.glass-card{
+
+    margin-top:40px;
+
+}
+
+.feature-card{
+
+    margin-bottom:25px;
+
+}
+
+.cta h2{
+
+    font-size:34px;
+
+}
+
+}
